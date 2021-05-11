@@ -1,27 +1,42 @@
 const numberOfVowels = (data) => {
-  let output = 0;
+  var vowel_list = 'aeiouAEIOU';
+  var vcount = 0;
 
-  for (let letter of data) {
-    switch (letter) {
-      case 'a':
-        output++;
-        break;
-      case 'e':
-        output++;
-        break;
-      case 'i':
-        output++;
-        break;
-      case 'o':
-        output++;
-        break;
-      case 'u':
-        output++;
-        break;
-      default:
+  /* The indexOf() method returns the index within the calling 
+  String object of the first occurrence of the specified value,
+  starting the search at fromIndex. Returns -1 if the value is not found.
+  */
+
+  for (let letter in data) {
+    if (vowel_list.indexOf(data[letter]) !== -1) {
+      vcount += 1;
     }
   }
-  return output;
+  return vcount;
+
+  // let output = 0;
+
+  // for (let letter of data) {
+  //   switch (letter) {
+  //     case 'a':
+  //       output++;
+  //       break;
+  //     case 'e':
+  //       output++;
+  //       break;
+  //     case 'i':
+  //       output++;
+  //       break;
+  //     case 'o':
+  //       output++;
+  //       break;
+  //     case 'u':
+  //       output++;
+  //       break;
+  //     default:
+  //   }
+  // }
+  // return output;
 };
 
 console.log(numberOfVowels('orange'));
