@@ -1,4 +1,4 @@
-const whereCanIPark = function (spots, vehicle) {
+const whereCanIPark = (spots, vehicle) => {
   for (let y = 0; y < spots.length; y++) {
     for (let x = 0; x < spots[y].length; x++) {
       const park = spots[y][x];
