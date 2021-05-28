@@ -18,8 +18,10 @@ const calculateChange = (total, cash) => {
 
   for (let value in bills) {
     while (change >= bills[value]) {
+      console.log('=', bills[value]);
       if (changeObject[value]) {
         changeObject[value] += 1;
+        console.log('CHANGE OBJECT', changeObject[value]);
       } else {
         changeObject[value] = 1;
       }
@@ -32,5 +34,5 @@ const calculateChange = (total, cash) => {
 };
 
 console.log(calculateChange(1787, 2000));
-console.log(calculateChange(2623, 4000));
-console.log(calculateChange(501, 1000));
+// console.log(calculateChange(2623, 4000));
+// console.log(calculateChange(501, 1000));
