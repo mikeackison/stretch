@@ -1,10 +1,14 @@
 const numberOfVowels = (data) => {
-  var vowel_list = 'aeiouAEIOU';
-  var vcount = 0;
+  let vowel_list = 'aeiouAEIOU';
+  let vcount = 0;
 
   /* The indexOf() method returns the index within the calling 
   String object of the first occurrence of the specified value,
   starting the search at fromIndex. Returns -1 if the value is not found.
+  */
+
+  /*
+  has to be a for..in loop not for..of
   */
 
   for (let letter in data) {
